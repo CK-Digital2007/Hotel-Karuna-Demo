@@ -1,17 +1,13 @@
-/* =================================
-   HOTEL KARUNA WEBSITE
-   MAIN STYLESHEET
-================================= */
-
 :root {
-    --gold: #b8860b;
-    --gold-light: #d4af37;
-    --dark: #17130f;
-    --dark-light: #282018;
-    --cream: #f8f4ed;
+    --gold: #c99b52;
+    --gold-light: #e5c68e;
+    --dark: #17120e;
+    --dark-soft: #211a15;
+    --cream: #f6f1e8;
     --white: #ffffff;
-    --text: #333333;
-    --muted: #6d6d6d;
+    --text: #2c251f;
+    --muted: #766e66;
+    --border: #e2d8ca;
 }
 
 * {
@@ -26,15 +22,17 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: var(--text);
+    font-family: "DM Sans", sans-serif;
     background: var(--white);
+    color: var(--text);
     line-height: 1.7;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.15;
 }
 
 a {
@@ -42,25 +40,32 @@ a {
     color: inherit;
 }
 
+img {
+    width: 100%;
+    display: block;
+}
+
 .container {
-    width: min(1150px, 90%);
+    width: min(1180px, 90%);
     margin: auto;
 }
 
+.section {
+    padding: 110px 0;
+}
 
-/* =================================
-   HEADER
-================================= */
+/* ================= HEADER ================= */
 
 .header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(23, 19, 15, 0.98);
+    background: rgba(23, 18, 14, 0.97);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar {
-    min-height: 80px;
+    min-height: 78px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,43 +78,41 @@ a {
     color: white;
 }
 
-.logo-icon {
-    width: 48px;
-    height: 48px;
-    border: 1px solid var(--gold-light);
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--gold);
     color: var(--gold-light);
-    border-radius: 50%;
     display: grid;
     place-items: center;
+    border-radius: 50%;
     font-family: "Playfair Display", serif;
-    font-size: 23px;
-    font-weight: 700;
+    font-size: 21px;
 }
 
-.logo strong {
+.logo-text strong {
     display: block;
-    font-size: 16px;
     letter-spacing: 1px;
+    font-size: 15px;
 }
 
-.logo small {
-    display: block;
+.logo-text span {
     color: var(--gold-light);
     font-size: 9px;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 27px;
+    gap: 23px;
 }
 
 .nav-links a {
-    color: white;
-    font-size: 13px;
-    font-weight: 500;
-    transition: color 0.25s ease;
+    color: #ddd;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.25s;
 }
 
 .nav-links a:hover {
@@ -117,100 +120,82 @@ a {
 }
 
 .nav-button {
-    border: 1px solid var(--gold-light);
-    padding: 10px 18px;
+    border: 1px solid var(--gold);
+    padding: 9px 16px;
+    color: white !important;
 }
 
 .nav-button:hover {
     background: var(--gold);
-    color: white !important;
 }
 
 .menu-toggle {
     display: none;
     background: transparent;
-    border: 0;
+    border: none;
     color: white;
     font-size: 28px;
     cursor: pointer;
 }
 
-
-/* =================================
-   HERO
-================================= */
+/* ================= HERO ================= */
 
 .hero {
+    min-height: 680px;
     position: relative;
-    min-height: 650px;
     display: flex;
     align-items: center;
-    overflow: hidden;
-}
-
-.hero-image {
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
+    background:
+        url("assets/images/hotel-exterior.png")
+        center/cover no-repeat;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-
     background:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.2)
+            rgba(18, 13, 9, 0.94) 0%,
+            rgba(18, 13, 9, 0.72) 48%,
+            rgba(18, 13, 9, 0.20) 100%
         );
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     color: white;
+    padding-bottom: 70px;
 }
 
-.eyebrow {
+.hero-badge {
     color: var(--gold-light);
     font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
     font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 15px;
-}
-
-.hero h1,
-.section-heading h2,
-.about-content h2,
-.celebration-content h2 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(42px, 6vw, 76px);
-    line-height: 1.1;
 }
 
 .hero h1 {
-    max-width: 750px;
+    font-size: clamp(52px, 7vw, 86px);
+    max-width: 850px;
 }
 
 .hero h1 span,
-.section-heading h2 span,
-.about-content h2 span,
-.celebration-content h2 span {
-    color: var(--gold-light);
+.intro-content h2 span,
+.section-header h2 span,
+.banquet-content h2 span,
+.gallery-heading h2 span,
+.contact-content h2 span {
+    color: var(--gold);
 }
 
-.hero-description {
-    max-width: 570px;
-    margin: 25px 0;
-    color: #eeeeee;
-    font-size: 15px;
+.hero-content > p {
+    max-width: 560px;
+    color: #ddd6cf;
+    margin: 24px 0 32px;
+    font-size: 16px;
 }
 
 .hero-buttons {
@@ -219,606 +204,454 @@ a {
     flex-wrap: wrap;
 }
 
-
-/* =================================
-   BUTTONS
-================================= */
-
 .btn {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-
-    padding: 13px 24px;
-
+    justify-content: center;
+    gap: 9px;
+    padding: 14px 24px;
     font-size: 12px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: all 0.25s ease;
+    font-weight: 700;
+    transition: 0.3s;
 }
 
 .btn-primary {
     background: var(--gold);
     color: white;
-    border: 1px solid var(--gold);
 }
 
 .btn-primary:hover {
-    background: #956b08;
+    background: #b48642;
     transform: translateY(-2px);
 }
 
-.btn-outline {
+.btn-secondary {
     color: white;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.65);
 }
 
-.btn-outline:hover {
+.btn-secondary:hover {
     background: white;
     color: var(--dark);
 }
 
-.dark-outline {
-    color: var(--dark);
-    border-color: var(--dark);
-}
-
-.dark-outline:hover {
+.btn-dark {
     background: var(--dark);
     color: white;
 }
 
-
-/* =================================
-   SERVICE STRIP
-================================= */
-
-.service-strip {
+.btn-dark:hover {
     background: var(--gold);
+}
+
+.btn-outline-dark {
+    border: 1px solid var(--dark);
+    color: var(--dark);
+}
+
+.btn-outline-dark:hover {
+    background: var(--dark);
     color: white;
-    padding: 20px 0;
 }
 
-.service-grid {
+.hero-bottom {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 15, 11, 0.88);
+    color: white;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 19px max(5%, calc((100% - 1180px) / 2));
 }
 
-.service-grid div {
-    text-align: center;
+.hero-bottom div {
+    padding: 0 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.service-grid span {
-    margin-right: 7px;
+.hero-bottom div:last-child {
+    border-right: none;
 }
 
-.service-grid strong {
+.hero-bottom strong {
+    display: block;
+    color: var(--gold-light);
     font-size: 13px;
 }
 
-
-/* =================================
-   GENERAL SECTIONS
-================================= */
-
-.section {
-    padding: 95px 0;
+.hero-bottom span {
+    font-size: 11px;
+    color: #c6c0bb;
 }
 
-.section-heading {
-    max-width: 720px;
-    margin: 0 auto 50px;
-    text-align: center;
+/* ================= COMMON ================= */
+
+.section-tag {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.section-heading h2 {
-    font-size: clamp(38px, 5vw, 58px);
-}
-
-.section-heading > p:last-child {
-    color: var(--muted);
-    font-size: 14px;
-    margin-top: 15px;
-}
-
-
-/* =================================
-   ABOUT
-================================= */
-
-.about-section {
-    background: var(--cream);
-}
-
-.about-grid {
+.intro-grid,
+.banquet-grid,
+.contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 65px;
+    gap: 80px;
     align-items: center;
 }
 
-.about-image {
+.image-frame {
     position: relative;
 }
 
-.about-image img {
-    width: 100%;
-    height: 480px;
+.image-frame > img {
+    height: 520px;
     object-fit: cover;
 }
 
-.image-badge {
+.experience-card {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-
-    background: var(--gold);
+    bottom: -20px;
+    right: -20px;
+    background: var(--dark);
     color: white;
-
-    padding: 12px 18px;
-
-    font-size: 12px;
-    font-weight: 600;
+    padding: 20px 25px;
+    border-left: 3px solid var(--gold);
 }
 
-.about-content h2 {
+.experience-card strong,
+.experience-card span {
+    display: block;
+}
+
+.experience-card strong {
+    font-size: 13px;
+}
+
+.experience-card span {
+    color: var(--gold-light);
+    font-size: 11px;
+}
+
+.intro-content h2,
+.section-header h2,
+.banquet-content h2,
+.gallery-heading h2,
+.contact-content h2 {
     font-size: clamp(38px, 5vw, 58px);
 }
 
-.about-content > p:not(.eyebrow) {
+.intro-content > p:not(.section-tag),
+.banquet-content > p:not(.section-tag),
+.contact-content > p:not(.section-tag) {
     color: var(--muted);
-    font-size: 14px;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
-.feature-list {
-    margin: 25px 0;
-}
-
-.feature-list div {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.feature-list span {
-    color: var(--gold);
-    font-weight: 800;
-    margin-right: 8px;
-}
-
-.text-button {
-    color: var(--gold);
-    font-weight: 700;
-    font-size: 13px;
-}
-
-
-/* =================================
-   MENU
-================================= */
-
-.menu-section {
-    background: white;
-    padding: 95px 0;
-}
-
-.menu-tabs {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 40px;
-}
-
-.menu-tab {
-    background: white;
-    border: 1px solid var(--gold-light);
-
-    color: var(--dark);
-
-    padding: 11px 18px;
-
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition: all 0.25s ease;
-}
-
-.menu-tab:hover,
-.menu-tab.active {
-    background: var(--gold);
-    color: white;
-}
-
-.menu-content {
-    display: none;
-
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 45px;
-
-    align-items: center;
-
-    background: var(--cream);
-
-    padding: 25px;
-}
-
-.menu-content.active-menu {
+.mini-features {
+    margin-top: 30px;
     display: grid;
-}
-
-.menu-photo {
-    height: 410px;
-    overflow: hidden;
-}
-
-.menu-photo img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: transform 0.4s ease;
-}
-
-.menu-photo:hover img {
-    transform: scale(1.04);
-}
-
-.menu-list h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 31px;
-    color: var(--dark);
-    margin-bottom: 10px;
-}
-
-.menu-description {
-    color: var(--muted);
-    font-size: 13px;
-    margin-bottom: 22px;
-}
-
-.food-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 11px;
-}
-
-.food-item {
-    background: white;
-
-    border-left: 3px solid var(--gold);
-
-    padding: 12px 14px;
-
-    font-size: 13px;
-    font-weight: 500;
-
-    transition: transform 0.2s ease;
-}
-
-.food-item:hover {
-    transform: translateX(4px);
-}
-
-
-/* =================================
-   GALLERY
-================================= */
-
-.gallery-section {
-    background: var(--cream);
-}
-
-.hotel-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
 }
 
-.gallery-item {
-    height: 300px;
-    overflow: hidden;
+.mini-features > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.gallery-large {
-    grid-column: span 2;
-    height: 430px;
+.mini-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--cream);
+    display: grid;
+    place-items: center;
+    font-size: 21px;
 }
 
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-
-/* =================================
-   CELEBRATION SECTION
-================================= */
-
-.celebration-section {
-    position: relative;
-
-    padding: 110px 0;
-
-    background:
-        linear-gradient(
-            rgba(23, 19, 15, 0.88),
-            rgba(23, 19, 15, 0.88)
-        ),
-        url("assets/images/restaurant-2.png");
-
-    background-size: cover;
-    background-position: center;
-
-    color: white;
-}
-
-.celebration-content {
-    max-width: 720px;
-    text-align: center;
-}
-
-.celebration-content p:not(.eyebrow) {
-    max-width: 600px;
-    margin: 20px auto 28px;
-    color: #dddddd;
+.mini-features strong {
     font-size: 14px;
 }
 
+.mini-features p {
+    color: var(--muted);
+    font-size: 12px;
+}
 
-/* =================================
-   CONTACT
-================================= */
+/* ================= RESTAURANT ================= */
 
-.contact-section {
+.restaurant-section {
+    background: var(--cream);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.text-link {
+    color: var(--dark);
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 5px;
+    white-space: nowrap;
+}
+
+.food-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.food-card {
+    background: white;
+    padding: 32px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(40, 30, 20, 0.1);
+}
+
+.featured-card {
+    background: var(--dark);
+    color: white;
+    border-color: var(--dark);
+}
+
+.food-icon {
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+.food-content span {
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.food-content h3 {
+    font-size: 26px;
+    margin: 8px 0;
+}
+
+.food-content p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.featured-card .food-content p {
+    color: #bbb3ab;
+}
+
+.restaurant-cta {
+    margin-top: 25px;
+    background: var(--gold-light);
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-cta h3 {
+    font-size: 25px;
+}
+
+/* ================= BANQUET ================= */
+
+.banquet {
+    background: var(--dark);
+    color: white;
+}
+
+.banquet-content > p:not(.section-tag) {
+    color: #bdb5ae;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.event-grid div {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 14px;
+    font-size: 13px;
+}
+
+.event-grid span {
+    margin-left: 6px;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(20, 15, 11, 0.92);
+    padding: 18px 22px;
+    color: white;
+    width: 75%;
+}
+
+.image-caption span {
+    display: block;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.image-caption strong {
+    font-family: "Playfair Display", serif;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery {
     background: white;
 }
 
-.contact-box {
-    background: var(--dark);
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
 
-    color: white;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 15px;
+}
 
-    padding: 45px;
+.gallery-grid div {
+    overflow: hidden;
+}
 
+.gallery-grid img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-grid div:hover img {
+    transform: scale(1.07);
+}
+
+.gallery-large {
+    grid-row: span 2;
+}
+
+.gallery-grid div:last-child {
+    grid-column: span 2;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background: var(--cream);
+    padding: 100px 0;
+}
+
+.contact-image img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.contact-info {
+    margin: 28px 0;
+}
+
+.contact-item {
     display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 30px;
+    gap: 14px;
+    margin-bottom: 18px;
 }
 
-.contact-info h3 {
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
-    margin-bottom: 13px;
+.contact-item > span {
+    font-size: 21px;
 }
 
-.contact-info p {
-    color: #d4d4d4;
+.contact-item strong {
+    display: block;
     font-size: 13px;
-    margin-bottom: 9px;
 }
 
-.contact-actions {
+.contact-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.contact-buttons {
     display: flex;
-    flex-direction: column;
     gap: 12px;
-
-    min-width: 190px;
+    flex-wrap: wrap;
 }
 
-
-/* =================================
-   FOOTER
-================================= */
+/* ================= FOOTER ================= */
 
 .footer {
-    background: #0c0a08;
+    background: #100c09;
     color: white;
-    text-align: center;
+    padding-top: 60px;
+}
 
-    padding: 45px 0;
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 45px;
 }
 
 .footer-logo {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 700;
 }
 
-.footer-logo strong {
-    letter-spacing: 1px;
+.footer-logo span {
+    color: var(--gold);
 }
 
-.footer > .container > p {
-    color: #aaa;
+.footer-top p {
+    color: #8e8780;
     font-size: 12px;
-    margin-top: 14px;
+    max-width: 350px;
+    margin-top: 12px;
 }
 
-.copyright {
-    border-top: 1px solid #333;
-
-    padding-top: 18px;
-
-    margin-top: 25px !important;
-
-    font-size: 11px !important;
+.footer-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-
-/* =================================
-   TABLET
-================================= */
-
-@media (max-width: 900px) {
-
-    .about-grid {
-        gap: 35px;
-    }
-
-    .nav-links {
-        gap: 16px;
-    }
-
+.footer-links a {
+    color: #aaa19a;
+    font-size: 12px;
 }
 
-
-/* =================================
-   MOBILE
-================================= */
-
-@media (max-width: 700px) {
-
-    .navbar {
-        min-height: 72px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-
-        position: absolute;
-
-        top: 72px;
-        left: 0;
-
-        width: 100%;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        background: var(--dark);
-
-        padding: 12px 5% 20px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        padding: 13px 0;
-        border-bottom: 1px solid #38312a;
-    }
-
-    .nav-button {
-        text-align: center;
-        margin-top: 12px;
-        border: 1px solid var(--gold-light) !important;
-    }
-
-    .hero {
-        min-height: 580px;
-    }
-
-    .hero-image {
-        object-position: center;
-    }
-
-    .hero-overlay {
-        background:
-            linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.82),
-                rgba(0, 0, 0, 0.55)
-            );
-    }
-
-    .hero h1 {
-        font-size: 45px;
-    }
-
-    .hero-description {
-        font-size: 13px;
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-    }
-
-    .service-grid strong {
-        display: block;
-        font-size: 11px;
-    }
-
-    .section,
-    .menu-section {
-        padding: 65px 0;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image img {
-        height: 330px;
-    }
-
-    .menu-content.active-menu {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 15px;
-    }
-
-    .menu-photo {
-        height: 260px;
-    }
-
-    .food-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hotel-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery-large {
-        grid-column: span 1;
-        height: 280px;
-    }
-
-    .gallery-item {
-        height: 250px;
-    }
-
-    .contact-box {
-        flex-direction: column;
-        align-items: stretch;
-
-        padding: 28px;
-    }
-
-    .contact-actions {
-        width: 100%;
-    }
-
+.footer-links a:hover {
+    color: var(--gold);
 }
+
+.footer-bottom {
+    border-top: 1px solid #302822;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #716961
