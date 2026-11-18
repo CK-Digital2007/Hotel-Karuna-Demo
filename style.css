@@ -656,3 +656,66 @@ img {
     justify-content: space-between;
     color: #716961
 }
+
+/* ================= REAL-BUSINESS DETAILS / DEMO NOTICE ================= */
+.demo-notice {
+    position: relative;
+    z-index: 1100;
+    padding: 8px 16px;
+    background: #30251b;
+    color: #f5e7d2;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: .25px;
+}
+.contact-info .contact-item p { overflow-wrap: anywhere; }
+
+@media (max-width: 900px) {
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 11px; }
+    .intro-grid, .banquet-grid, .contact-wrapper { gap: 42px; }
+}
+
+@media (max-width: 760px) {
+    .navbar { min-height: 70px; }
+    .menu-toggle { display: block; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 18px 5%;
+        background: rgba(23, 18, 14, .99);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-links.active { display: flex; }
+    .nav-links a { padding: 12px 0; font-size: 13px; }
+    .nav-links .nav-button { text-align: center; margin-top: 8px; }
+    .hero { min-height: 650px; }
+    .hero-bottom { grid-template-columns: 1fr; gap: 8px; padding: 14px 5%; }
+    .hero-bottom div { border-right: 0; padding: 0; }
+    .hero-content { padding-bottom: 135px; }
+    .intro-grid, .banquet-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 42px; }
+    .image-frame > img { height: 360px; }
+    .experience-card { right: 8px; bottom: -15px; }
+    .food-cards { grid-template-columns: 1fr; }
+    .section-header { align-items: flex-start; flex-direction: column; }
+    .restaurant-cta { align-items: flex-start; flex-direction: column; gap: 18px; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 180px 180px; }
+    .gallery-large { grid-row: auto; grid-column: span 2; }
+    .gallery-grid div:last-child { grid-column: auto; }
+    .section { padding: 75px 0; }
+}
+
+@media (max-width: 420px) {
+    .logo-text strong { font-size: 12px; }
+    .logo-text span { font-size: 7px; letter-spacing: .7px; }
+    .logo-mark { width: 38px; height: 38px; }
+    .hero h1 { font-size: 46px; }
+    .event-grid { grid-template-columns: 1fr; }
+    .contact-buttons { display: flex; flex-direction: column; align-items: stretch; }
+}

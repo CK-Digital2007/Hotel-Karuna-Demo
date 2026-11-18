@@ -1,509 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Menu | Hotel Karuna</title>
-
+    <title>Menu | Hotel Karuna Celebration, Solapur</title>
+    <meta name="description" content="Explore menu categories and listed vegetarian dishes at Hotel Karuna Celebration, Solapur. Contact the restaurant for current availability and prices.">
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-
-        .menu-page-hero {
-            background: var(--dark);
-            color: white;
-            padding: 100px 0 80px;
-            text-align: center;
-        }
-
-        .menu-page-hero h1 {
-            font-size: clamp(50px, 7vw, 80px);
-        }
-
-        .menu-page-hero h1 span {
-            color: var(--gold);
-        }
-
-        .menu-page-hero p:last-child {
-            color: #bdb5ae;
-            max-width: 550px;
-            margin: 18px auto 0;
-        }
-
-        .menu-navigation {
-            background: var(--cream);
-            padding: 18px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .menu-navigation .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .menu-navigation a {
-            font-size: 11px;
-            font-weight: 700;
-            padding: 8px 14px;
-            border: 1px solid var(--border);
-        }
-
-        .menu-navigation a:hover {
-            background: var(--dark);
-            color: white;
-        }
-
-        .menu-content {
-            padding: 80px 0;
-        }
-
-        .menu-category {
-            margin-bottom: 75px;
-        }
-
-        .menu-category-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .menu-category-header span {
-            color: var(--gold);
-            font-size: 11px;
-            letter-spacing: 2px;
-            font-weight: 700;
-        }
-
-        .menu-category-header h2 {
-            font-size: 40px;
-            margin-top: 8px;
-        }
-
-        .menu-items {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px 40px;
-        }
-
-        .menu-item-row {
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .menu-item-row h3 {
-            font-family: "DM Sans", sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-        }
-
-        .menu-item-row p {
-            font-size: 11px;
-            color: var(--muted);
-            margin-top: 3px;
-        }
-
-        .menu-note {
-            background: var(--cream);
-            padding: 22px;
-            text-align: center;
-            color: var(--muted);
-            font-size: 12px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 650px) {
-            .menu-items {
-                grid-template-columns: 1fr;
-            }
-        }
-
+        .menu-page-hero{background:var(--dark);color:white;padding:76px 0 65px;text-align:center}
+        .menu-page-hero h1{font-size:clamp(46px,7vw,76px)}
+        .menu-page-hero h1 span{color:var(--gold)}
+        .menu-page-hero .menu-intro{color:#bdb5ae;max-width:650px;margin:18px auto 0}
+        .menu-navigation{position:sticky;top:78px;z-index:50;background:var(--cream);padding:14px 0;border-bottom:1px solid var(--border)}
+        .menu-navigation .container{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+        .menu-navigation a{font-size:11px;font-weight:700;padding:8px 12px;border:1px solid var(--border);border-radius:2px}
+        .menu-navigation a:hover{background:var(--dark);color:white}
+        .menu-content{padding:65px 0}
+        .menu-category{margin-bottom:58px;scroll-margin-top:150px}
+        .menu-category-header{text-align:left;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+        .menu-category-header span{color:var(--gold);font-size:10px;letter-spacing:2px;font-weight:700}
+        .menu-category-header h2{font-size:clamp(28px,4vw,38px);margin-top:5px}
+        .menu-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 42px}
+        .menu-item-row{padding:12px 0;border-bottom:1px solid var(--border)}
+        .menu-item-row h3{font-family:"DM Sans",sans-serif;font-size:14px;font-weight:600}
+        .menu-note{background:var(--cream);padding:22px;text-align:center;color:var(--muted);font-size:12px;margin-top:20px}
+        .menu-contact{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+        @media(max-width:650px){.menu-items{grid-template-columns:1fr}.menu-navigation{top:70px}.menu-navigation .container{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.menu-navigation a{white-space:nowrap}}
     </style>
-
 </head>
-
 <body>
-
-
+    <div class="demo-notice">Independent website concept by CK Digital Solutions — this is a demonstration, not the restaurant’s verified official website.</div>
     <header class="header">
-
         <div class="container navbar">
-
-            <a href="index.html" class="logo">
-
-                <div class="logo-mark">K</div>
-
-                <div class="logo-text">
-                    <strong>HOTEL KARUNA</strong>
-                    <span>Restaurant & Banquet Hall</span>
-                </div>
-
-            </a>
-
-
-            <button class="menu-toggle">☰</button>
-
-
+            <a href="index.html" class="logo"><div class="logo-mark">K</div><div class="logo-text"><strong>HOTEL KARUNA CELEBRATION</strong><span>PURE VEG FAMILY RESTAURANT & BANQUET HALL</span></div></a>
+            <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
             <nav class="nav-links">
-
-                <a href="index.html">Home</a>
-                <a href="index.html#about">About</a>
-                <a href="menu.html">Menu</a>
-                <a href="index.html#banquet">Banquet Hall</a>
-                <a href="index.html#gallery">Gallery</a>
-                <a href="index.html#contact" class="nav-button">Contact Us</a>
-
+                <a href="index.html">Home</a><a href="index.html#about">About</a><a href="menu.html" aria-current="page">Menu</a><a href="index.html#banquet">Banquet Hall</a><a href="index.html#gallery">Gallery</a><a href="index.html#contact" class="nav-button">Contact Us</a>
             </nav>
-
         </div>
-
     </header>
-
-
-    <section class="menu-page-hero">
-
-        <div class="container">
-
-            <p class="section-tag">PURE VEGETARIAN CUISINE</p>
-
-            <h1>
-                Our <span>Menu.</span>
-            </h1>
-
-            <p>
-                Explore a selection of delicious vegetarian dishes
-                and discover your favourite flavours.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <nav class="menu-navigation">
-
-        <div class="container">
-
-            <a href="#special">Special</a>
-            <a href="#main-course">Main Course</a>
-            <a href="#maharashtrian">Maharashtrian</a>
-            <a href="#rice">Rice & Biryani</a>
-            <a href="#chinese">Chinese</a>
-            <a href="#beverages">Beverages</a>
-
-        </div>
-
-    </nav>
-
-
-    <main class="menu-content">
-
-        <div class="container">
-
-
-            <!-- KARUNA SPECIAL -->
-
-            <section class="menu-category" id="special">
-
-                <div class="menu-category-header">
-                    <span>HOUSE FAVOURITES</span>
-                    <h2>Karuna Specialities</h2>
-                </div>
-
-                <div class="menu-items">
-
-                    <div class="menu-item-row">
-                        <h3>Karuna Veg Garden</h3>
-                        <p>A special vegetarian preparation.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Karuna Veg Handi</h3>
-                        <p>A rich and flavourful vegetable dish.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Karuna Veg Pahadi</h3>
-                        <p>A delicious special selection.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Veg Angara</h3>
-                        <p>Bold and flavourful vegetarian cuisine.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- MAIN COURSE -->
-
-            <section class="menu-category" id="main-course">
-
-                <div class="menu-category-header">
-                    <span>INDIAN FLAVOURS</span>
-                    <h2>Main Course</h2>
-                </div>
-
-                <div class="menu-items">
-
-                    <div class="menu-item-row">
-                        <h3>Paneer Masala</h3>
-                        <p>Rich and flavourful paneer preparation.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Paneer Kadai</h3>
-                        <p>Paneer cooked with aromatic spices.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Paneer Tikka Masala</h3>
-                        <p>A popular Indian favourite.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Kaju Masala</h3>
-                        <p>A rich and delicious cashew preparation.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Mix Veg</h3>
-                        <p>A combination of fresh vegetables.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Veg Kolhapuri</h3>
-                        <p>A spicy and flavourful classic.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- MAHARASHTRIAN -->
-
-            <section class="menu-category" id="maharashtrian">
-
-                <div class="menu-category-header">
-                    <span>LOCAL FLAVOURS</span>
-                    <h2>Maharashtrian Special</h2>
-                </div>
-
-                <div class="menu-items">
-
-                    <div class="menu-item-row">
-                        <h3>Besan Fry</h3>
-                        <p>A traditional vegetarian dish.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Sev Bhaji</h3>
-                        <p>A popular Maharashtrian favourite.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Dal Fry</h3>
-                        <p>A comforting Indian classic.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Dal Tadka</h3>
-                        <p>Dal prepared with aromatic tempering.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- RICE -->
-
-            <section class="menu-category" id="rice">
-
-                <div class="menu-category-header">
-                    <span>RICE SPECIALITIES</span>
-                    <h2>Rice & Biryani</h2>
-                </div>
-
-                <div class="menu-items">
-
-                    <div class="menu-item-row">
-                        <h3>Basmati Jeera Rice</h3>
-                        <p>Fragrant basmati rice with cumin.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Veg Pulao</h3>
-                        <p>Vegetables and aromatic rice.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Veg Biryani</h3>
-                        <p>A flavourful rice preparation.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Karuna Special Pot Biryani</h3>
-                        <p>A special rice preparation.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- CHINESE -->
-
-            <section class="menu-category" id="chinese">
-
-                <div class="menu-category-header">
-                    <span>INDO-CHINESE</span>
-                    <h2>Chinese & Snacks</h2>
-                </div>
-
-                <div class="menu-items">
-
-                    <div class="menu-item-row">
-                        <h3>Veg Fried Rice</h3>
-                        <p>A popular Indo-Chinese favourite.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Schezwan Fried Rice</h3>
-                        <p>Spicy and flavourful fried rice.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Hakka Noodles</h3>
-                        <p>Classic vegetable noodles.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Veg Manchurian</h3>
-                        <p>A popular Indo-Chinese dish.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Gobi Manchurian</h3>
-                        <p>Delicious cauliflower preparation.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Paneer Chilli</h3>
-                        <p>Paneer with spicy flavours.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- BEVERAGES -->
-
-            <section class="menu-category" id="beverages">
-
-                <div class="menu-category-header">
-                    <span>REFRESHING DRINKS</span>
-                    <h2>Beverages</h2>
-                </div>
-
-                <div class="menu-items">
-
-                    <div class="menu-item-row">
-                        <h3>Cold Coffee</h3>
-                        <p>A refreshing coffee drink.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Chocolate Milkshake</h3>
-                        <p>A rich and creamy beverage.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Oreo Milkshake</h3>
-                        <p>A delicious sweet treat.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Fresh Lime Soda</h3>
-                        <p>A refreshing classic drink.</p>
-                    </div>
-
-                    <div class="menu-item-row">
-                        <h3>Mojito</h3>
-                        <p>A cool and refreshing beverage.</p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <div class="menu-note">
-
-                Menu items and availability may change. Please contact
-                Hotel Karuna for the latest menu and pricing information.
-
-            </div>
-
-        </div>
-
-    </main>
-
-
-    <footer class="footer">
-
-        <div class="container footer-top">
-
-            <div>
-
-                <a href="index.html" class="footer-logo">
-                    HOTEL <span>KARUNA</span>
-                </a>
-
-                <p>
-                    Delicious vegetarian food and memorable celebrations.
-                </p>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <a href="index.html">Home</a>
-                <a href="index.html#about">About</a>
-                <a href="index.html#banquet">Banquet Hall</a>
-                <a href="index.html#contact">Contact</a>
-
-            </div>
-
-        </div>
-
-
-        <div class="container footer-bottom">
-
-            <p>© 2026 Hotel Karuna. All rights reserved.</p>
-            <p>Website Demo</p>
-
-        </div>
-
-    </footer>
-
-
+    <section class="menu-page-hero"><div class="container"><p class="section-tag">PURE VEGETARIAN CUISINE</p><h1>Explore Our <span>Menu.</span></h1><p class="menu-intro">A broad vegetarian selection across Indian favourites, Indo-Chinese dishes, snacks, pizzas, beverages and more.</p></div></section>
+    <nav class="menu-navigation"><div class="container">
+        <a href="#special">Karuna Special</a><a href="#soups">Soups & Salads</a><a href="#starters">Starters</a><a href="#main-course">Main Course</a><a href="#rice">Rice & Biryani</a><a href="#chinese">Fried Rice & Noodles</a><a href="#pizza">Pizza & Pasta</a><a href="#snacks">Snacks & Chaat</a><a href="#beverages">Beverages</a>
+    </div></nav>
+    <main class="menu-content"><div class="container">
+        <section class="menu-category" id="special"><div class="menu-category-header"><span>HOUSE FAVOURITES</span><h2>Karuna Special</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Dhapate</h3></div><div class="menu-item-row"><h3>Karuna Veg Garden</h3></div><div class="menu-item-row"><h3>Karuna Veg Handi</h3></div><div class="menu-item-row"><h3>Karuna Veg Pahadi</h3></div><div class="menu-item-row"><h3>Karuna Veg Special</h3></div><div class="menu-item-row"><h3>Spicy Veg Lahori</h3></div><div class="menu-item-row"><h3>Veg Amritsari Red Gravy</h3></div><div class="menu-item-row"><h3>Veg Angara</h3></div><div class="menu-item-row"><h3>Veg Banjara Yellow Gravy</h3></div><div class="menu-item-row"><h3>Veg Chilli Milli Red Gravy</h3></div><div class="menu-item-row"><h3>Veg Hajari Garlic Palak Gravy</h3></div><div class="menu-item-row"><h3>Veg Mili Juli</h3></div><div class="menu-item-row"><h3>Veg Patiala</h3></div><div class="menu-item-row"><h3>Veg Peshawari Palak Gravy</h3></div><div class="menu-item-row"><h3>Veg Tawa Masala</h3></div><div class="menu-item-row"><h3>Veg Tiranga</h3></div>
+        </div></section>
+        <section class="menu-category" id="soups"><div class="menu-category-header"><span>LIGHT & COMFORTING</span><h2>Soups & Salads</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Hot and Sour Soup</h3></div><div class="menu-item-row"><h3>Sweet Corn Soup</h3></div><div class="menu-item-row"><h3>Tomato and Dhaniya Soup</h3></div><div class="menu-item-row"><h3>Tomato Soup</h3></div><div class="menu-item-row"><h3>Veg Burnt Garlic Soup</h3></div><div class="menu-item-row"><h3>Veg Clear Soup</h3></div><div class="menu-item-row"><h3>Veg Manchow Soup</h3></div>
+        </div></section>
+        <section class="menu-category" id="starters"><div class="menu-category-header"><span>STARTERS</span><h2>Chinese Starters</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Corn Salt & Pepper</h3></div><div class="menu-item-row"><h3>Gobi 65</h3></div><div class="menu-item-row"><h3>Gobi Manchurian</h3></div><div class="menu-item-row"><h3>Paneer 65</h3></div><div class="menu-item-row"><h3>Paneer Chilli</h3></div><div class="menu-item-row"><h3>Paneer Chop</h3></div><div class="menu-item-row"><h3>Paneer Garlic</h3></div><div class="menu-item-row"><h3>Paneer Hot Pan</h3></div><div class="menu-item-row"><h3>Paneer Manchurian</h3></div><div class="menu-item-row"><h3>Potato Honey Chilli</h3></div><div class="menu-item-row"><h3>Veg 65</h3></div><div class="menu-item-row"><h3>Veg Manchurian</h3></div>
+        </div></section>
+        <section class="menu-category" id="main-course"><div class="menu-category-header"><span>INDIAN FLAVOURS</span><h2>Main Course</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Paneer Angara</h3></div><div class="menu-item-row"><h3>Paneer Banjara</h3></div><div class="menu-item-row"><h3>Paneer Keema</h3></div><div class="menu-item-row"><h3>Paneer Khurchan</h3></div><div class="menu-item-row"><h3>Paneer Lababdar Red Gravy</h3></div><div class="menu-item-row"><h3>Paneer Lajawab</h3></div><div class="menu-item-row"><h3>Paneer Lazeez Masala</h3></div><div class="menu-item-row"><h3>Paneer Maharaja</h3></div><div class="menu-item-row"><h3>Paneer Malvani</h3></div><div class="menu-item-row"><h3>Paneer Pahadi</h3></div><div class="menu-item-row"><h3>Paneer Peshawari Yellow Gravy</h3></div><div class="menu-item-row"><h3>Paneer Savji</h3></div><div class="menu-item-row"><h3>Paneer Toofani</h3></div><div class="menu-item-row"><h3>Paneer Varadi</h3></div><div class="menu-item-row"><h3>Paneer Tawa Masala</h3></div><div class="menu-item-row"><h3>Kaju Masala</h3></div><div class="menu-item-row"><h3>Matar Kaju Korma</h3></div><div class="menu-item-row"><h3>Mix Veg</h3></div><div class="menu-item-row"><h3>Palak Paneer</h3></div><div class="menu-item-row"><h3>Paneer Bhurji</h3></div><div class="menu-item-row"><h3>Paneer Hyderabadi</h3></div><div class="menu-item-row"><h3>Tandoori Roti</h3></div>
+        </div></section>
+        <section class="menu-category" id="rice"><div class="menu-category-header"><span>RICE SPECIALITIES</span><h2>Rice & Biryani</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Basmati Jeera Rice</h3></div><div class="menu-item-row"><h3>Basmati Plain Rice</h3></div><div class="menu-item-row"><h3>Ghee Dal Khichdi</h3></div><div class="menu-item-row"><h3>Masala Rice</h3></div><div class="menu-item-row"><h3>Veg Pulao</h3></div><div class="menu-item-row"><h3>Karuna Special Pot Biryani</h3></div>
+        </div></section>
+        <section class="menu-category" id="chinese"><div class="menu-category-header"><span>INDO-CHINESE</span><h2>Fried Rice & Noodles</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Burnt Garlic Fried Rice</h3></div><div class="menu-item-row"><h3>Paneer Chilli Fried Rice</h3></div><div class="menu-item-row"><h3>Paneer Fried Rice</h3></div><div class="menu-item-row"><h3>Schezwan Fried Rice</h3></div><div class="menu-item-row"><h3>Singapuri Fried Rice</h3></div><div class="menu-item-row"><h3>Triple Fried Rice</h3></div><div class="menu-item-row"><h3>Triple Schezwan Fried Rice</h3></div><div class="menu-item-row"><h3>Veg Fried Rice</h3></div><div class="menu-item-row"><h3>Karuna Special Noodles</h3></div><div class="menu-item-row"><h3>Paneer Noodles</h3></div><div class="menu-item-row"><h3>Veg Hakka Noodles</h3></div><div class="menu-item-row"><h3>Veg Schezwan Noodles</h3></div>
+        </div></section>
+        <section class="menu-category" id="pizza"><div class="menu-category-header"><span>MORE TO EXPLORE</span><h2>Pizza, Pasta, Burgers & Sandwiches</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Cheese Pizza</h3></div><div class="menu-item-row"><h3>Crispy Onion Pizza</h3></div><div class="menu-item-row"><h3>Crunchy Capsicum Pizza</h3></div><div class="menu-item-row"><h3>Manchurian Pizza</h3></div><div class="menu-item-row"><h3>Paneer Tikka Pizza</h3></div><div class="menu-item-row"><h3>Sweet Corn Pizza</h3></div><div class="menu-item-row"><h3>Veg Blast Pizza</h3></div><div class="menu-item-row"><h3>Veggie Surprise Pizza</h3></div><div class="menu-item-row"><h3>Aloo Sweet Corn Burger</h3></div><div class="menu-item-row"><h3>Aloo Tikka Burger</h3></div><div class="menu-item-row"><h3>Paneer Tikka Burger</h3></div>
+        </div></section>
+        <section class="menu-category" id="snacks"><div class="menu-category-header"><span>QUICK BITES</span><h2>Snacks, Chaat & Accompaniments</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Cheese Fries</h3></div><div class="menu-item-row"><h3>Corn Crispy</h3></div><div class="menu-item-row"><h3>Masala Fries</h3></div><div class="menu-item-row"><h3>Peri Peri Fries</h3></div><div class="menu-item-row"><h3>Fried Papad</h3></div><div class="menu-item-row"><h3>Masala Papad</h3></div><div class="menu-item-row"><h3>Roasted Papad</h3></div>
+        </div></section>
+        <section class="menu-category" id="beverages"><div class="menu-category-header"><span>REFRESHING DRINKS</span><h2>Beverages, Juices & Milkshakes</h2></div><div class="menu-items">
+            <div class="menu-item-row"><h3>Caramel Cold Coffee</h3></div><div class="menu-item-row"><h3>Cold Coffee With Ice Cream</h3></div><div class="menu-item-row"><h3>Cold Coffee</h3></div><div class="menu-item-row"><h3>Fresh Lime Soda</h3></div><div class="menu-item-row"><h3>Nimbu Sharbat</h3></div><div class="menu-item-row"><h3>Blueberry Milkshake</h3></div><div class="menu-item-row"><h3>Butterscotch Milkshake</h3></div><div class="menu-item-row"><h3>Chocolate Milkshake</h3></div><div class="menu-item-row"><h3>Dry Fruit Milkshake</h3></div><div class="menu-item-row"><h3>Kitkat Milkshake</h3></div><div class="menu-item-row"><h3>Mango Milkshake</h3></div><div class="menu-item-row"><h3>Oreo Milkshake</h3></div><div class="menu-item-row"><h3>Pista Milkshake</h3></div><div class="menu-item-row"><h3>Rose Milkshake</h3></div><div class="menu-item-row"><h3>Vanilla Milkshake</h3></div>
+        </div></section>
+        <div class="menu-note">Menu items and prices can change. This menu is a selection transcribed from a public online menu listing; please call Hotel Karuna Celebration to confirm current availability and prices.</div>
+        <div class="menu-contact"><a href="tel:+919090900224" class="btn btn-dark">Call +91 90909 00224</a><a href="index.html#contact" class="btn btn-outline-dark">Location & Contact</a></div>
+    </div></main>
+    <footer class="footer"><div class="container footer-top"><div><a href="index.html" class="footer-logo">HOTEL <span>KARUNA</span></a><p>Pure vegetarian family dining and celebrations in Solapur.</p></div><div class="footer-links"><a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#banquet">Banquet Hall</a><a href="index.html#contact">Contact</a></div></div><div class="container footer-bottom"><p>© 2026 Hotel Karuna Celebration.</p><p>Independent demo by CK Digital Solutions · Not the official website</p></div></footer>
     <script src="script.js"></script>
-
 </body>
-
 </html>
